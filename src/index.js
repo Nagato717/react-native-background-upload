@@ -119,4 +119,8 @@ export const addListener = (
   });
 };
 
-export default { startUpload, cancelUpload, addListener, getFileInfo };
+export const removeListener = () => {
+  return DeviceEventEmitter.removeAllListeners();
+};
+
+export default { startUpload, cancelUpload, addListener, getFileInfo, removeListener };
